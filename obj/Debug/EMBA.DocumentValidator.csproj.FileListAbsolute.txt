@@ -1,0 +1,4 @@
+E:\TFServer2013\ischoolteam\ischool_EMBA\FiscaRuntime\addmodules\DocumentValidator\EMBA.DocumentValidator.dll
+E:\TFServer2013\ischoolteam\ischool_EMBA\FiscaRuntime\addmodules\DocumentValidator\EMBA.DocumentValidator.pdb
+E:\TFServer2013\ischoolteam\ischool_EMBA\EMBA.DocumentValidator\obj\Debug\EMBA.DocumentValidator.dll
+E:\TFServer2013\ischoolteam\ischool_EMBA\EMBA.DocumentValidator\obj\Debug\EMBA.DocumentValidator.pdb

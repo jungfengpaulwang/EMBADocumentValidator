@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A108F18E-D035-45F3-B9D4-F1B612C0DAD9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EMBA.DocumentValidator</RootNamespace>
+    <AssemblyName>EMBA.DocumentValidator</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>obj\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=9.5.0.1, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="FISCA">
+      <HintPath>..\FiscaRuntime\kernel\FISCA.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Condition\AndCondition.cs" />
+    <Compile Include="Condition\Condition.cs" />
+    <Compile Include="Condition\ConditionCollection.cs" />
+    <Compile Include="Condition\NotCondition.cs" />
+    <Compile Include="Condition\OrCondition.cs" />
+    <Compile Include="Condition\StaticDateTime.cs" />
+    <Compile Include="Condition\StaticInteger.cs" />
+    <Compile Include="Condition\StaticString.cs" />
+    <Compile Include="Condition\XorCondition.cs" />
+    <Compile Include="DocumentValidate.cs" />
+    <Compile Include="DuplicateDetection.cs" />
+    <Compile Include="EnumDefinitions.cs" />
+    <Compile Include="EventDefinitions.cs" />
+    <Compile Include="FactoryProvider.cs" />
+    <Compile Include="FieldDescription.cs" />
+    <Compile Include="FieldValidate.cs" />
+    <Compile Include="FieldValidatedDescription.cs" />
+    <Compile Include="FieldValidatedDescription_Extension.cs" />
+    <Compile Include="FieldValidatorCollection.cs" />
+    <Compile Include="FieldValidator\DataTypeValidator.cs" />
+    <Compile Include="FieldValidator\DateValidator.cs" />
+    <Compile Include="FieldValidator\DecimalValidator.cs" />
+    <Compile Include="FieldValidator\EnumerationValidator.cs" />
+    <Compile Include="FieldValidator\IntegerValidator.cs" />
+    <Compile Include="FieldValidator\MixDateValidator.cs" />
+    <Compile Include="FieldValidator\RegexValidator.cs" />
+    <Compile Include="FieldValidator\StringLengthValidator.cs" />
+    <Compile Include="FieldValidator\UniqueKeyValidator.cs" />
+    <Compile Include="Interfaces\IConditionExpression.cs" />
+    <Compile Include="Interfaces\IConditionFactory.cs" />
+    <Compile Include="Interfaces\IFieldValidator.cs" />
+    <Compile Include="Interfaces\IFieldValidatorFactory.cs" />
+    <Compile Include="Interfaces\IRowStream.cs" />
+    <Compile Include="Interfaces\IRowVaildator.cs" />
+    <Compile Include="Interfaces\IRowValidatorFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RowValidate.cs" />
+    <Compile Include="RowValidatorCollection.cs" />
+    <Compile Include="RowValidator\DefaultRowValidator.cs" />
+    <Compile Include="RowValidator\DuplicationRowValidator.cs" />
+    <Compile Include="RowValidator\LookupRowValidator.cs" />
+    <Compile Include="RowValidator\UniqueKeyRowValidator.cs" />
+    <Compile Include="ValidateStatement.cs" />
+    <Compile Include="ValidateStatements.cs" />
+    <Compile Include="XmlHelper.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
